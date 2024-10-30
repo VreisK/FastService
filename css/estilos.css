@@ -1,0 +1,1798 @@
+*{
+    margin :0;
+    scroll-behavior: smooth;
+    font-size: 18px;
+    padding :0;
+    font-family: 'Dosis', sans-serif;
+}
+:root{
+    --secundary-color:#79ab46;
+    --primary-color:#3b5998;
+    --terciary-color:#595959;
+}
+body{
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+.checkBoxDark{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+#chatGeral{
+    display: flex;
+    justify-content: space-between;
+}
+#chatConversa{
+    height: 400px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background: gray;
+    width: 700px;
+}
+#inputChat{
+    background-color:#e4ebf0;
+    margin-top:20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    border-radius:20px;
+    display: flex;
+    gap: 270px;
+    justify-content:space-around;
+    flex-direction:column;
+}
+.inputChat{
+    display:flex;
+    height:50px;
+    justify-content:space-between;
+    align-items:center;
+}
+.ChatimagemPerfil{
+    border-radius: 20px;
+    width: 200px;
+    height: 100px;
+}
+#ChatPerfil{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid black;
+}
+.UsuariosPerfil{
+    padding: 0 19px 0 0;
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+}
+.inputChat button{
+    margin-right: 10px;
+    background-color: var(--primary-color);
+}
+.inputChat input{
+    width: 820px;
+    border: 1px solid var(--terciary-color);
+    outline: none;
+    border-radius: 30px;
+    height: 30px;
+}
+.inputChat button{
+    width: 40px;
+    height: 40px;
+}
+.label{
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    transform: scale(1.5);
+}
+.ball{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+}
+.checkBoxDark:checked +.label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
+}
+.divCentral{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+header{
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: space-around;  
+    align-items: center; 
+}
+.user{
+    background-color: var(--terciary-color);
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: .5s ease-in-out;
+}
+.maeFiltro{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.user i{
+    font-size: 25px;
+    color: white
+}
+
+header img{
+    width: 70px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+.navbar,.nav-list{
+    gap: 40px; 
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.navbar a,.nav-list a {
+    position: relative;
+}
+.navbar a::after,.nav-list a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 0.5s ease-in-out;
+    height: 3px;
+    background: var(--primary-color);
+}
+.navbar a:hover::after,.nav-list:hover::after{
+    width: 100%;
+}
+#btn,#btnSair,.btnSair{
+    font-size: 17px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    background: none;
+    display: block;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+#btn:hover,#btnSair:hover,.btnSair:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-top: 2px solid var(--primary-color);
+}
+footer ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.listfooter a{
+    transition: 0.5s;
+}
+.listfooter a:hover{
+    color: black;
+}
+footer a{
+    color: var(--terciary-color);
+    text-decoration: none;
+}
+
+.redesSociais a{  
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    background-color: var(--primary-color);
+    color:white;
+    border-radius: 50px;
+    transition: 0.8s;
+}
+.redesSociais a:hover{
+    background-color: var(--clr);
+}
+.footer{
+    justify-content: space-around;
+}
+main{
+    height: 900px;
+    display: flex;
+}
+.foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foto img{
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#titulo{
+    color: var(--primary-color);
+}
+.passotexto{
+    border-bottom: 2px solid var(--primary-color);
+    width: 690px;
+}
+
+.bordaredonda{
+    display: flex;
+    gap: 150px;
+    justify-content: space-between;
+}
+
+.bordaverde{
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bordaverde > i{
+    color: white;
+    font-size: 25px;
+}
+.btnSanduich{
+    display: none;
+}
+.mobileMenu{
+    display: none;
+}
+.divtudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imgEpagina{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#maeFaq{
+    min-height: 80vh;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+.faq{
+    max-width: 700px;
+    margin-top:1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secundary-color);
+    cursor: pointer;
+}
+.questions{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.answer{
+    max-height: 0;
+    width: 500px;
+    transition: max-height 1.4s ease;
+    overflow: hidden;
+}
+#comentarios{
+   width: 1000px;
+   margin-top: 20px;
+   flex-direction: column;
+}
+.maeComentarios{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.filhaComentarios{
+    margin-top: 40px;
+    width: 900px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+.avaliacoesComentarios{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+   width: 90%;
+    align-items: center;
+    display: flex;
+    gap: 80px;
+}
+.testeComenarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.comentarioComentarios{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    gap: 100px;
+}
+.comentarioComentarios input{
+    width: 500px;
+    height: 50px;
+    outline: none;
+}
+.btnComentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.todosComentarios{
+    width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px;
+}
+.selecAvaliacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+}
+.todosComentarios li{
+    list-style: none;
+}
+.maeTodosComentarios{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active svg{
+    transform: rotate(180deg);
+}
+svg{
+    transition: transform 0.5s ease-in;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.answer p{
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+.passotexto2{
+    margin-top: 150px;
+    
+    border-bottom: 2px solid var(--primary-color);
+    width: 380px;
+}
+.passotexto2 h3{
+    color: var(--terciary-color);
+}
+
+.imgEpagina > img{
+    width: 500px;
+}
+
+.textoPagina{
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+}
+#passos{
+    margin-top: 50px;
+}
+#passos h3{
+    color: var(--terciary-color);
+}
+
+
+#top{
+    gap: 17px;
+}
+#top a{
+    transition: 0.5s ease;
+}
+#top a:hover{
+    color: black;
+    font-size: 17px;
+}
+
+#publi{
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    width: 100px;
+    float: right;
+    margin: 20px 10px;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    color: white;
+    border-radius: 100px;
+    border: none;
+}
+.anuncios{
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+.anuncios h3{
+    color: var(--terciary-color);
+    width: 200px;
+    border-bottom: 2px solid var(--primary-color);
+}
+#nomeUsuarioCel{
+    display: none;
+}
+.boxAnuncios{
+    display: flex;
+    justify-content: space-around;
+}
+.boxAnuncios a{
+    text-decoration: none;
+    color: black;
+}
+#anuncio{
+    height: 150px;
+    margin-top: 40px;
+    display: flex;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10px;  
+}
+#anuncio img{
+    width: 120px;
+    height: 150px;
+}
+#anuncio p{
+    margin-top: 7px;
+}
+
+#tituloAnuncio{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.search-box{
+    height: 30px;
+    border-radius: 40px;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    transition: 0.5s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn{
+    color: var(--primary-color);
+    width: 40px;
+    float: right;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: var(--primary-color);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 240px;
+}
+.search-txt::placeholder{
+    color: var(--primary-color);
+}
+.perfil{
+    margin-top: 80px;
+   margin-bottom: 60px;
+}
+.paiAnuncio{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.perfil h3{
+    color: var(--terciary-color);
+    width: 200px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.tituloAlterarSenha{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maeAnuncio{
+    display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center; 
+    flex-direction: column;
+}
+.Perfil{
+    width: 190px;
+    height: 250px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--secundary-color);
+}
+.maePerfil{
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.maePerfil a{
+    color: black;
+    text-decoration: none;
+}
+.maePerfil img{
+    width: 180px;
+    cursor: pointer;
+    height: 180px;
+    border-radius: 10px;
+}
+.desPerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tituloPerfil{
+    padding: 10px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+#botaoAnun{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btnPublicarhome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categorias{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.maeCategoria{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.maeCategoria a{
+    text-decoration: none;
+    color: black;
+}
+.bordaAzul{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    height: 120px;
+    width:200px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categorias h3{
+    color: var(--terciary-color);
+    border-bottom: 2px solid var(--primary-color);
+    width: 240px;
+}
+.paiTitulo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.paiTitulo p{
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    gap: 900px;
+    justify-content: center;
+    align-items: center;
+}
+/* Cadastro -------------------------------------------------------------------------------------------------------- */
+.containerCadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px 0 ;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+}
+.formulario_caixa{
+    background: white;
+    flex-direction: column;
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--secundary-color);
+    text-align: center;
+    box-shadow: 5px 5px 7px;
+    
+}
+#btnCel{
+    display: none;
+}
+.formulario_caixa h1{
+    color: black;
+    /* colocar linha */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+.formulario_caixa p{
+    /* colocar icon de exclamacao */
+ color: black;
+}
+
+.formulario input, select, button{
+    border-radius: 5px;
+    padding: 2px;
+    border: 2px solid transparent;
+    outline: none;
+    
+}
+.formulario input{
+    margin: 7px;
+    background: #e6e5e5;
+    color: black;
+}
+.formulario select, option{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.botaoLogin{
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    color: white;
+    font-weight: bold;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+#btnCadastro,#alterar{
+    padding: 10px 15px;
+    border: none;
+  background-color: gray;
+    color: white;
+    font-weight: bold;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+.corValida{
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    color: white;
+    font-weight: bold;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+
+#tituloLogin h1{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+#tituloCadastro h1{
+    border-bottom:solid 2px var(--primary-color);
+}
+/* conta ------------------------------------------------------------------------------------------------------ */
+#conta{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#conta h1{
+    margin-bottom: 20px;
+}
+.maeConta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paiConta{
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    padding: 40px 0px;
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    margin-bottom: 40px;
+}
+.fotoConta img,.maeEdit img{
+    height: 170px;
+    width: 170px;
+    border-radius: 20px;
+   
+}
+.infoConta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fotoConta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.topicosConta{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    flex-direction: column;
+}
+.topicosConta button{
+    width: 400px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+#btnSair{
+    margin-top: 25px;
+    background-color: rgb(194, 8, 8);
+    width: auto;
+    font-size: 15px;
+}
+.btnSair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* publicar ------------------------------------------------------------------------------------------------------- */
+#publicar{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.paiPublicar{
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+.paiPublicar input{
+    height: 30px;
+    border-radius: 10px;
+    width: 40%;
+    outline: none;
+    transition: 0.5s;
+   border: 2px solid var(--primary-color);
+}
+.inputPublicar{
+    margin-left: 50px;
+}
+#descPublicar{
+    width: 40%;
+    outline: none;
+    transition: 0.5s;
+    resize: none;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+#precoAnuncio{
+    width: 400px;
+}
+.paiPublicar input:focus{
+   border: 2px solid var(--secundary-color);
+}
+#descPublicar:focus{
+    border: 2px solid var(--secundary-color);
+}
+#teste{
+    display: flex;
+    width: 100%;
+}
+.paiInput{
+    display: flex;
+    padding: 20px 0 ;
+    gap: 150px;
+}
+.paiInput input[type=text]{
+    width: 400px;
+}
+.paiInput input[type=select]{
+    width: 800px;
+}
+#categoriaAnuncio{
+    width: 400px;
+    height: 30px;
+}
+.paiInput input[type=number]{
+    width: 400px;
+}
+.paiInput input[type=file]{
+    padding: 50px;
+}
+.paiRadio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.maeRadio{
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+    align-items: center;
+}
+#descricao{
+    height: 100px;
+}
+.inputPublicar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#btnPublicar, .paiEdit button,#enviarReport,#btnVermais,#btnFiltrar,.btnComentarios button{
+    height: 40px;
+    cursor: pointer;
+    color: white;   
+    transition: 0.5s ease-in-out;
+    width: 100px;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    border-radius: 100px;
+    border: none;
+}
+#btnPublicar{
+    margin-top: 30px;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    color: white;
+}
+#enviarReport{
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    color: white;
+}
+.paiEdit button:hover{
+    background-color: var(--secundary-color);
+    color: white;
+}
+.paiBtnpublicar{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#minhasPublis{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-self: center;
+}
+#minhasPublis h1{
+    margin-bottom: 30px;
+}
+.paiPubli{
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.tituloPubli{
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1px solid var(--terciary-color);
+}
+#paiPub{
+    margin-top: 30px;
+}
+.tituloPubli h3{
+    color: var(--primary-color);
+}
+.msgPubli h4{
+    color: var(--terciary-color);
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+/* busca -------------------------------------------------------------------------------------------------- */
+.btnBusca{
+    display: flex;
+    margin-bottom: 70px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+.div1publi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ordenar{
+    background: white;
+    border: none;
+    outline: none;
+    width: 25px;
+    cursor: pointer;
+}
+.div2publi{
+    margin-right: 20px;
+}
+.paiBusca{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.paiBusca a{
+    text-decoration: none;
+    color: black;
+}
+.buscas{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+   border-radius: 5px;
+}
+.buscas img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+}
+.busca{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.inforbusca{
+    margin-top: 10px;
+    display: flex;
+    gap: 100px;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+#editPer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+.tituloEdit{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.maeEdit{
+    width: 800px;
+    display: flex;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.paiEdit{
+    display: flex;
+    gap: 20px;
+    padding: 30px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.paiGeneros input{
+    margin: 5px;
+}
+.btnEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paiEdit > input,select{
+    width: 300px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    height: 25px;
+   padding: 3px;
+    border-radius: 20px;
+}
+
+/* Alterar email e senha ---------------------------------------------------------------- */
+.sectionAlterar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.containerAlterar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerAlterar h3{
+    color: var(--terciary-color);
+     margin-bottom: 7px;
+}
+.divTudoAlterar{
+    flex-direction: column;
+    width: 430px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.alterar{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#velhoemail,#senhaConfirm{
+    width: 300px;
+}
+.alterar input{
+    border-radius: 5px;
+    padding: 2px;
+    border: 2px solid transparent;
+    outline: none;
+    margin: 7px;
+    background: #e6e5e5;
+    color: black;   
+}
+#novoemail{
+    margin-bottom: 40px;
+    height: 22px;
+    width: 300px;
+}
+.alterar label{
+    width: 500px;
+    margin-bottom: 2px;
+}
+.mudanca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.mudanca input{
+    border-radius: 10px;
+    border-color: var(--primary-color);
+    padding: 4px;
+    width: 300px;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: black;
+    margin: 8px;
+}
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+/* reporte problema ------------------------------------------------------------------------------------------ */
+.centralReport{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.inputsRep{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+}
+#report h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+#reportMae{
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    width:600px;
+    align-items: center;
+}
+#report{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.centralReport{
+    padding:20px 0px;
+}
+#inputMotivo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#emailReport,#motivo{
+    border: none;
+    width: 300px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    height: 33px;
+    outline: none;
+    transition: 0.5s;
+}
+.cidade_estado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+#descReport{
+    width: 300px;
+    height: 100px;
+    border: none;
+    width: 300px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    outline: none;
+    transition: 0.5s;
+}
+/*Paginação toinho*/
+div#paginacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+.listSenha ul{
+    list-style: none;
+    padding: 20px 0px 0px 0px;
+}
+.listSenha p{
+    color: var(--terciary-color);
+}
+#nomeCompleto,#telefone,#emailCadas,#senhaCadas{
+    width: 300px;
+}
+#uf,#cidade{
+    width: 200px;
+}
+.informacoesAnununcios{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Buscar ---------------------------------------------------------------------------------------------------- */
+.paiMeusAnuncios img{
+    width: 200px;
+    height: 90%px;
+}
+.paiMeusAnuncios{
+    display: flex;
+    flex-direction: column;
+}
+.maeMeusAnuncios{
+    padding: 20px 0 ;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.informacoesMeusAnuncios{
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.tituloMeusAnuncios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#descPublica{
+    width: 200px;
+}
+.paiTeste{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnExcluirAnuncio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+.btnExcluir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnExcluir button{
+    width: 100px;
+    background-color: red;
+}
+.btnExcluirAnuncio button{
+    width: 130px;
+    height: 30px;
+    background-color: #e81405;
+    color: white;
+    cursor: pointer;
+}
+.btnVermais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+}
+.imgBusca img{
+    width: 150PX;
+    height: 150px;
+    padding: 10px 0;
+    margin-left: 9px;
+}   
+#esqueSenha{
+    cursor: pointer;
+    color: var(--terciary-color);
+}
+.imgDoAnuncio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imgDoAnuncio img{
+    width: 900px;
+    height: 500px 
+}
+#clickAnuncio{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tituloClick{
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    justify-content: flex-start;
+}
+.descAnuncio{
+    display: flex;
+    width: 900px;
+    padding: 20px 0px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 650px;
+}
+.detalhesAnuncio{
+    display: flex;
+ justify-content: space-between;
+    align-items: center;
+}
+.detalhes2{
+    display: flex;
+    flex-direction: column;
+}
+.perfilAnuncio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 600px;
+}
+.informacoesPerfil{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+}
+.informacoesPerfil p{
+    font-size: 15px;
+}
+.informacoesPerfil h1{
+    text-align: center;
+}
+.openMenu{
+    display: none;
+}
+.closeMenu{
+    display: none;
+}
+#btnChat2{
+    height: 30px;
+    cursor: pointer;
+    color: white;   
+    transition: 0.5s ease-in-out;
+    width: 100px;
+    background: linear-gradient(45deg,var(--secundary-color),var(--primary-color) );
+    border-radius: 100px;
+    border: none;
+}
+.caixaBtnChat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maisInformacoes{
+    display: flex;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+}
+.tituloComentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px ;
+}
+.asInformacoes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 0;
+    gap: 10px;
+    width: 1000px;
+    flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+    header {
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .navbar {
+        display: none; /* Esconde a navegação em telas menores */
+    }
+
+    #logo {
+        margin-left: 20px; /* Ajuste o espaçamento entre a logo e o botão */
+    }
+   
+    .bordaverde{
+        width: 80px;
+        height: 80px;
+    }
+    .divtudo{
+        margin-left: 13px;
+    }
+    .passotexto,.passotexto2{
+        width: 300px;
+        margin-left: 20px;
+    }
+    .anuncios h3,.perfil h3,.categorias h3{
+        margin-left: 20px;
+    }
+    .bordaredonda{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        margin-bottom: 40px;
+        gap: 0px;
+    }
+    .divtudo p{
+        font-size: 15px;
+    }
+    .imgEpagina{
+        flex-direction: column;
+    }
+    .imgEpagina img{
+        display: none;
+    }
+    .faq,.answer{
+        width: 300px;
+    }
+    .divtudo{
+        height: 200px;
+        width: 200px;
+        display: flex;;
+        justify-content: center;
+        align-items: center;
+    }
+    #maeFaq{
+        margin-top: 30px;
+    }
+    .listfooter{
+        display: none;
+    }
+    .search-btn{
+        display: none;
+    }
+    .search-box{
+        width: 150px;
+    }
+    footer p{
+        display: none;
+    }
+    .formulario_caixa{
+        width: 300px;
+    }
+    .search-txt{
+        width: 100%;
+    }
+    .user{
+        display: none;
+    }
+    .navbar2{
+        display: none;
+    }
+    .btnSanduich{
+        display: block;
+    }
+    .boxAnuncios{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.paiAnuncio{
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+#anuncio{
+    width: 350px;
+    height: 200px;
+}
+#anuncio img{
+    height: 93%;
+    width: 160px;
+    border-radius: 10px;
+}
+.paiBusca{
+    gap: 40px;
+}
+.foto img{
+    height: 200px;
+}
+.imgDoAnuncio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.fotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maePerfil{
+    width: 200px;
+}
+
+.maeCategoria{
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#top{
+    display: none;
+}
+.inforbusca{
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.buscas{
+    height: 250px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+.buscas img{
+    margin-left: 10px;
+    padding: 0 10px 0 0 ;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+.paiInput{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.paiPublicar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputPublicar{
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.paiInput input[type=text]{
+    width: 200px;
+}
+#precoAnuncio,#categoriaAnuncio{
+    width: 200px;
+}
+.paiInput input[type=select]{
+    width: 200px;
+}
+.maeMeusAnuncios{
+    flex-direction: column;
+}
+.informacoesMeusAnuncios{
+    justify-content: center;
+    align-items: center;
+     gap: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+.paiConta{
+    width: 400px;
+}
+.topicosConta button{
+    width: 250px;
+}
+.maeEdit{
+    width: 400px;
+}   
+.divTudoAlterar,.tituloAlterarSenha{
+    width: 400px;
+}
+.imgClick img{
+    width: 100%;
+}
+.tituloClick{
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+.descAnuncio{
+    margin-left: 20px;
+    gap: 20px;
+    flex-direction: column;
+}
+.asInformacoes{
+    justify-content: center;
+    align-items: center;
+}
+ .nav-list {
+    height: 80vh;
+    position: fixed;
+    top: 2px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  background: white;
+    transition: top 1s ease 0s;
+    display: none;
+  }
+   .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+   .openMenu {
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+  .openMenu i{
+    font-size: 25px;
+  }
+  .btnSair{
+    display: none;
+  }
+   .nav-list li a:hover {
+    background: none;
+  color: var(--primary-color);
+  }
+  #btnCel,#nomeUsuarioCel{
+    display: block;
+  }
+  #btnCel{
+    border: none;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+  }
+  #nomeUsuario{
+    display: none;
+  }
+  .btnExcluir button{
+    width: 100px;
+  }
+  .maisInformacoes{
+    width: 100vw;
+  }
+  .perfilAnuncio{
+    width: 200px;
+  }
+  #comentarios{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    align-items: center;
+  }
+  .maeComentarios{
+    width: 400px;
+  }
+  .filhaComentarios{
+    width: 350px;
+    height: 250px;
+  }
+  .avaliacoesComentarios{
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 2px;
+  }
+  .todosComentarios{
+    width: 350px;
+  }
+  .maisInformacoes,#comentarios{
+    width: 400px;
+  }
+.descAnuncio{
+    width: 100px;
+}
+.selecAvaliacoes{
+    display: block;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.comentarioComentarios{
+    width: 300px;
+    gap: 30px;
+}
+.comentarioComentarios input{
+    width: 250px;
+    border-radius: 10px;
+   border: 1px solid black;
+}
+.maeTodosComentarios{
+    gap: 10px;
+}
+}
